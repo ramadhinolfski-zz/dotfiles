@@ -114,7 +114,7 @@ bindsym $mod+Shift+5 move container to workspace $ws5
 #       Class                   Workspace
 assign [class="Firefox"]        $ws2
 assign [class="Chrome"]         $ws2
-assign [class="Rxvt-unicode"]   $ws3
+assign [class="^URxvt$"] 	$ws3
 assign [class="Sublime"]        $ws3
 assign [class="Telegram"]       $ws5
 assign [Class="Thunar"]         $ws4
