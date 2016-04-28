@@ -1,0 +1,213 @@
+# i3 config file 
+set $mod Mod4
+#setup color
+set $col1 #343C48
+set $col2 #528588
+set $col3 #E5E5E5
+set $col4 #BA5E57
+set $col5 #E38179
+set $col6 #343C48
+set $col7 #528588
+
+font pango:System San Francisco Display 6
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# start a terminal
+bindsym $mod+Return exec urxvt
+bindsym $mod+i exec ~/.config/i3/bin/info-dzen
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+
+bindsym $mod+r exec dmenu_run # ~/.config/i3/bin/dmenu_suh.sh
+
+# change focus
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+for_window [class="^.*"] border pixel 1
+
+# switch to workspace
+set $ws1  "1: "
+set $ws2  "2: "
+set $ws3  "3: "
+set $ws4  "4: "
+set $ws5  "5: "
+
+workspace $ws1 gaps inner 2
+workspace $ws1 gaps outer 2
+workspace $ws2 gaps inner 2
+workspace $ws2 gaps outer 2
+workspace $ws3 gaps inner 2
+workspace $ws3 gaps outer 2
+workspace $ws4 gaps inner 2
+workspace $ws4 gaps outer 2
+workspace $ws5 gaps inner 2
+workspace $ws5 gaps outer 2
+
+workspace_auto_back_and_forth yes
+
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+
+bindsym $mod+Tab workspace back_and_forth
+
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+
+## Auto open in workspace
+#       Class                   Workspace
+assign [class="Firefox"]        $ws2
+assign [class="Chrome"]         $ws2
+assign [class="Rxvt-unicode"]   $ws3
+assign [class="Sublime"]        $ws3
+assign [class="Telegram"]       $ws5
+assign [Class="Thunar"]         $ws4
+assign [class="Nautilus"]       $ws4
+assign [class="Gwenview"]       $ws4
+assign [class="Libreoffice"]    $ws4
+assign [class="Okular"]         $ws4
+assign [class="Spotify"]        $ws5
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+#bindsym $mod+Shift+e exec sh ~/.i3/assets/bin/powermenu.sh 
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym semicolon resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+m mode "resize"
+
+gaps inner 10
+gaps outer 5
+
+# class                 border  backgr. text    indicator child_border
+client.focused          $col2 $col2 $col2
+client.focused          $col2 $col2 $col2
+client.unfocused        $col6 $col6 $col6
+client.focused_inactive $col1 $col1 $col1
+client.urgent           $col1 $col1 $col1
+
+bar {
+        status_command ~/.config/i3/bin/panel-info.sh
+        position top
+        height 25
+        strip_workspace_numbers yes
+        font pango:FontAwesome 10
+        colors {
+                background             $col1
+                statusline             $col1
+                active_workspace       $col4 $col4 $col3
+                focused_workspace      $col4 $col4 $col3
+                inactive_workspace     $col6 $col6 $col3
+                urgent_workspace       $col7 $col7 $col3
+        }
+}
+
+# Pulse Audio controls
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +3% #increase sound volume
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -3% #decrease sound volume
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+# volume
+bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
+# granular volume control
+bindsym $mod+XF86AudioRaiseVolume exec amixer -D pulse sset Master 1%+ && pkill -RTMIN+1 i3blocks
+bindsym $mod+XF86AudioLowerVolume exec amixer -D pulse sset Master 1%- && pkill -RTMIN+1 i3blocks
+# mute
+bindsym XF86AudioMute exec amixer sset Master toggle && killall -USR1 i3blocks
+
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+
+# Touchpad controls
+bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+bindsym $mod+shift+x exec i3lock --color "$bg-color"

@@ -1,0 +1,14 @@
+background no
+out_to_console yes
+out_to_x no
+update_interval 0.3
+total_run_times 0
+use_spacer none
+
+TEXT
+^fg(\#528588)^i(/home/ramadhan/.icons/stlarch/uparrow4.xbm)^fg()  ${upspeedf enp1s0}   \
+^fg(\#BA5E57)^i(/home/ramadhan/.icons/stlarch/downarrow4.xbm)^fg()  ${downspeedf enp1s0}  \
+^fg(\#528588)^i(/home/ramadhan/.icons/stlarch/skip1.xbm)^fg()     \
+# ^fg(\#7d7d7d)^fg() ${exec mpc current -f %title% | tr ‘[a-z]’ ‘[A-Z]’}  (${mpd_elapsed}/${mpd_length})   \
+# ^fg(\#505E73)  //^fg()      \
+# ^bg(\#528588)      ${time %R %p}     \
