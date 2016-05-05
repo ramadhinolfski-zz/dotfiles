@@ -21,7 +21,7 @@ bindsym $mod+Return exec urxvt
 # Bindsym
 bindsym $mod+w exec firefox
 bindsym $mod+s exec subl3
-bindsym $mod+o exec libreoffice
+bindsym $mod+o exec libreoffice --nologo --writer
 bindsym $mod+g exec gimp
 bindsym $mod+e exec thunar
 bindsym $mod+z exec inkscape
@@ -130,11 +130,15 @@ assign [class="Telegram"]       $ws5
 assign [Class="Thunar"]         $ws4
 assign [class="Nautilus"]       $ws4
 assign [class="Gwenview"]       $ws4
-assign [class="Libreoffice"]    $ws4
+assign [class="Office"]    	$ws4
 assign [class="Okular"]         $ws4
+for_window [class="^Spotify Premium$"] floating enable
 assign [class="Spotify"]        $ws5
 assign [class="Franz"]        	$ws5
 assign [class="Brackets"]       $ws3
+assign [class="Xarchiver"]      $ws4
+assign [class="Ark"]	      	$ws4
+assign [class="Okular"]		$ws4
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
