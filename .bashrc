@@ -23,6 +23,6 @@ alias perbarui='yaourt -Syyuua --noconfirm'
 
 # Alias Git
 alias add='git add'
-alias push='git push origin master'
+alias push='git push origin '
 alias commit='git commit -m'
 
