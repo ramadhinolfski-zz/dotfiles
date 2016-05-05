@@ -123,7 +123,8 @@ assign [class="Gwenview"]       $ws4
 assign [class="Libreoffice"]    $ws4
 assign [class="Okular"]         $ws4
 assign [class="Spotify"]        $ws5
-assign [class="Franz"]        $ws5
+assign [class="Franz"]        	$ws5
+assign [class="Brackets"]       $ws3
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
