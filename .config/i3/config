@@ -23,7 +23,7 @@ bindsym $mod+w exec firefox
 bindsym $mod+s exec subl3
 bindsym $mod+o exec libreoffice
 bindsym $mod+g exec gimp
-bindsym $mod+e exec nautilus
+bindsym $mod+e exec thunar
 bindsym $mod+z exec inkscape
 bindsym $mod+x exec pycharm
 bindsym $mod+p exec system-config-printer 
