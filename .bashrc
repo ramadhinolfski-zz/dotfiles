@@ -19,7 +19,7 @@ alias xampp='sudo /opt/lampp/xampp start'
 
 # Update upgrade
 alias perbarui='yaourt -Syyuua --noconfirm'
-
+alias install='yaourt -S --noconfirm'
 
 # Alias Git
 alias add='git add'
