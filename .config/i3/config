@@ -16,7 +16,17 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec urxvt
-bindsym $mod+i exec ~/.config/i3/bin/info-dzen
+#bindsym $mod+i exec ~/.config/i3/bin/info-dzen
+
+# Bindsym
+bindsym $mod+w exec firefox
+bindsym $mod+s exec subl3
+bindsym $mod+o exec libreoffice
+bindsym $mod+g exec gimp
+bindsym $mod+e exec nautilus
+bindsym $mod+z exec inkscape
+bindsym $mod+x exec pycharm
+bindsym $mod+p exec system-config-printer 
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -27,8 +37,8 @@ bindsym $mod+r exec dmenu_run # ~/.config/i3/bin/dmenu_suh.sh
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+i focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -58,9 +68,9 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+#bindsym $mod+s layout stacking
+#bindsym $mod+w layout tabbed
+#bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
