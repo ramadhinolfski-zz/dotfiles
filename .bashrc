@@ -14,3 +14,6 @@ PS1='\[\e[1;30m\]┌─[\[\e[1;36m\] \d \[\e[1;31m\]\T \[\e[1;30m\]]\n\[\e[1;30m
 alias l='ls -la'
 alias up='sudo ifconfig enp1s0 up; sudo dhcpcd'
 alias xampp='sudo /opt/lampp/xampp start'
+#
+alias add='git add'
+alias push='git push origin master'
