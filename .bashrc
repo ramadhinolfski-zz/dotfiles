@@ -17,3 +17,4 @@ alias xampp='sudo /opt/lampp/xampp start'
 #
 alias add='git add'
 alias push='git push origin master'
+alias commit='git commit -m'
