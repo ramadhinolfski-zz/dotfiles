@@ -1,0 +1,13 @@
+{
+	"color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme",
+	"enable_tab_scrolling": false,
+	"font_face": "Monaco",
+	"font_size": 8,
+	"spacegray_sidebar_font_small": true,
+	"spacegray_sidebar_tree_xsmall": true,
+	"spacegray_tabs_auto_width": true,
+	"spacegray_tabs_font_small": true,
+	"spacegray_tabs_small": true,
+	"theme": "Spacegray.sublime-theme",
+	"word_wrap": true,
+}
