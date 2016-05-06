@@ -140,7 +140,6 @@ assign [class="Franz"]        	$ws5
 assign [class="Brackets"]       $ws3
 assign [class="Xarchiver"]      $ws4
 assign [class="Ark"]	      	$ws4
-assign [class="Okular"]		$ws4
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
