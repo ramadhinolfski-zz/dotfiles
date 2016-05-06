@@ -134,7 +134,7 @@ assign [class="Nautilus"]       $ws4
 assign [class="Gwenview"]       $ws4
 assign [class="Office"]    	$ws4
 assign [class="Okular"]         $ws4
-for_window [class="^Spotify Premium$"] floating enable
+for_window [class="^Spotify$"] floating enable
 assign [class="Spotify"]        $ws5
 assign [class="Franz"]        	$ws5
 assign [class="Brackets"]       $ws3
@@ -186,7 +186,7 @@ client.focused_inactive $col1 $col1 $col1
 client.urgent           $col1 $col1 $col1
 
 bar {
-        status_command ~/.config/i3/bin/panel-info.sh
+       status_command ~/.config/i3/bin/panel-info.sh
         position top
         height 25
         strip_workspace_numbers yes

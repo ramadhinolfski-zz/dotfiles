@@ -1,5 +1,5 @@
 #!/bin/sh
-ScreenWidth=1366
+ScreenWidth=1338
 fg="#efefef"
 bg="#343C48"
 hg="25"
