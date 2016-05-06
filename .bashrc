@@ -25,4 +25,4 @@ alias install='yaourt -S --noconfirm'
 alias add='git add'
 alias push='git push origin '
 alias commit='git commit -m'
-
+alias status='git status'
