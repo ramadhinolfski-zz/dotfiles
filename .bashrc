@@ -16,7 +16,7 @@ function parse_git_dirty {
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
 }
-PS1="\[$(tput setaf 1;tput rev)\]\u\[$(tput sgr0)\]\[$(tput setaf 1)\]\356\202\260\[$(tput setaf 2;tput rev)\]\356\202\260 \W \[$(tput sgr0)\]\[$(tput setaf 2)\]\356\202\260\[$(tput setaf 3;tput rev)\]\356\202\260\[$(tput sgr0)\]\[$(tput setaf 3)\]\356\202\260\[$(tput sgr0)\] "
+PS1="\[$(tput rev;tput setaf 1)\]\356\202\260\$(tput setaf 1;tput rev)\]\u\[$(tput sgr0)\]\[$(tput setaf 1)\]\356\202\260\[$(tput setaf 2;tput rev)\]\356\202\260 \W \[$(tput sgr0)\]\[$(tput setaf 2)\]\356\202\260\[$(tput setaf 3;tput rev)\]\356\202\260\[$(tput sgr0)\]\[$(tput setaf 3)\]\356\202\260\[$(tput sgr0)\] "
 
 #install wrapper
 export WORKON_HOME=~/.virtualenvs
