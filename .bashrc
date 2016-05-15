@@ -34,9 +34,11 @@ alias xampp='sudo /opt/lampp/xampp start'
 alias update='yaourt -Syyuua --noconfirm'
 alias install='yaourt -S --noconfirm'
 alias remove='yaourt -Rn'
+
 # Alias Git
-alias add='git add'
+alias add='git add '
 alias push='git push origin '
+alias pull='git pull origin '
 alias commit='git commit -m'
 alias status='git status'
-alias add remote='git remote add origin'
+alias remote='git remote add origin'
