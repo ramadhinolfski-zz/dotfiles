@@ -42,3 +42,7 @@ alias pull='git pull origin '
 alias commit='git commit -m'
 alias status='git status'
 alias remote='git remote add origin'
+
+export TERM='rxvt-unicode-256color'
+export TERM='linux'
+alias mysql='/opt/lampp/bin/mysql -u root -p'
