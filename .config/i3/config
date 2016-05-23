@@ -25,7 +25,6 @@ bindsym $mod+o exec libreoffice --nologo --writer
 bindsym $mod+g exec gimp
 bindsym $mod+e exec thunar
 bindsym $mod+z exec inkscape
-bindsym $mod+x exec pycharm
 bindsym $mod+p exec system-config-printer 
 
 # kill focused window
@@ -132,14 +131,16 @@ assign [Class="Thunar"]         $ws4
 for_window [class="Thunar"] floating enable
 assign [class="Nautilus"]       $ws4
 assign [class="Gwenview"]       $ws4
-assign [class="Office"]    	$ws4
+assign [class="LoWriter"]    	$ws4
 assign [class="Okular"]         $ws4
+assign [class="Leafpad"]         $ws4
 for_window [class="^Spotify$"] floating enable
 assign [class="Spotify"]        $ws5
 assign [class="Franz"]        	$ws5
 assign [class="Brackets"]       $ws3
 assign [class="Xarchiver"]      $ws4
 assign [class="Ark"]	      	$ws4
+assign [class="Writer"]		$ws4
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -227,6 +228,6 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-bindsym $mod+shift+x exec i3lock --color "$bg-color"
+bindsym $mod+x exec i3lock --color "$col1"
 
 exec --no-startup-id nm-applet
